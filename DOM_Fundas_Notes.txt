@@ -1,0 +1,73 @@
+DOM- Document Object Model 
+
+                                   DOM
+                                    |
+                                  Element(<html>)  
+                                     |
+                Element(<head>)                     Element(<body>)
+                                       |
+                                       |
+                                       |
+                                       and so on
+
+The HTML DOM is an Object Model for HTML. It defines:
+
+1. HTML elements as objects
+2. Properties for all HTML elements
+3. Methods for all HTML elements
+4. Events for all HTML elements  
+
+-----------------------Finding HTML Elements
+When you want to access HTML elements with JavaScript, you have to find the elements first.
+
+There are a couple of ways to do this:
+
+1. Finding HTML elements by id
+2. Finding HTML elements by tag name
+3. Finding HTML elements by class name
+4. Finding HTML elements by CSS selectors
+5. Finding HTML elements by HTML object collection
+
+------------------------Finding HTML Element by Id
+The easiest way to find an HTML element in the DOM, is by using the element id.
+
+This example finds the element with id="intro":
+
+Example
+var myElement = document.getElementById("intro");
+
+------------------------Finding HTML Elements by Tag Name
+This example finds all <p> elements:
+
+Example
+var x = document.getElementsByTagName("p");
+
+-------------------------Finding HTML Elements by Class Name
+If you want to find all HTML elements with the same class name, use getElementsByClassName().
+This example returns a list of all elements with class="intro".
+
+Example
+var x = document.getElementsByClassName("intro");
+
+---------------------------Finding HTML Elements by CSS Selectors
+If you want to find all HTML elements that matches a specified CSS selector (id, class names, types, attributes, values of attributes, etc), use the querySelectorAll() method.
+This example returns a list of all <p> elements with class="intro".
+
+Example
+var x = document.querySelectorAll("p.intro");
+
+
+---------------------------JavaScript HTML DOM EventListener
+
+The addEventListener() method----
+Example:
+Add an event listener that fires when a user clicks a button:
+
+document.getElementById("myBtn").addEventListener("click", displayDate);
+
+Syntax----
+element.addEventListener(event, function, useCapture);
+
+The first parameter is the type of the event (like "click" or "mousedown" or any other HTML DOM Event.)
+The second parameter is the function we want to call when the event occurs.
+The third parameter is a boolean value specifying whether to use event bubbling or event capturing. This parameter is optional.
